@@ -14,7 +14,7 @@ let tileSize = canvas.width / tileCount - 2;
 let headX = 10; //position of snake's head
 let headY = 10;
 const snakeParts = [];
-let tailLength = 50;
+let tailLength = 3;
 
 let appleX = 5;
 let appleY = 5;

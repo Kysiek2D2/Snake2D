@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-image: linear-gradient(rgb(117, 13, 38), rgb(11, 23, 98));
+    /* Full height */
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+canvas {
+    box-shadow: black 20px 10px 50px;
+}
+
+h1 {
+    color:  rgb(245,245,245, 0.83);
+}
+
+p {
+    color:  rgb(245,245,245, 0.83);
+}

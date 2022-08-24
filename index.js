@@ -21,6 +21,8 @@ let appleY = 5;
 
 let xVelocity = 0;
 let yVelocity = 0;
+let previousXVelocity = 0;
+let previousYVelocity = 0;
 
 let score = 0;
 
@@ -30,6 +32,8 @@ document.body.addEventListener('keydown', keyDown);
 
 function drawGame() {
     log('Refreshing...');
+
+    preventBackMovementCrash()
 
     changeSnakePosition();
 
@@ -144,32 +148,41 @@ function keyDown(event) {
 
     //'left' arrow:
     if (event.keyCode == 37) {
-        if (xVelocity == 1)
-            return;
         yVelocity = 0;
         xVelocity = -1;
     }
     //'up' arrow:
     if (event.keyCode == 38) {
-        if (yVelocity == 1)
-            return;
         yVelocity = -1;
         xVelocity = 0;
     }
     //'right' arrow:
     if (event.keyCode == 39) {
-        if (xVelocity == -1)
-            return;
         yVelocity = 0;
         xVelocity = 1;
     }
     //'down' arrow:
     if (event.keyCode == 40) {
-        if (yVelocity == -1)
-            return;
         yVelocity = 1;
         xVelocity = 0;
     }
+}
+
+function preventBackMovementCrash(){
+    if(previousXVelocity == 1 && xVelocity == -1)
+    xVelocity = previousXVelocity;
+
+    if(previousXVelocity == -1 && xVelocity ==1)
+        xVelocity = previousXVelocity;
+
+    if(previousYVelocity == 1 && yVelocity == -1)
+        yVelocity = previousYVelocity;
+
+    if(previousYVelocity == -1 && yVelocity ==1)
+        yVelocity = previousYVelocity;
+
+    previousXVelocity = xVelocity;
+    previousYVelocity = yVelocity;
 }
 
 function log(message) {

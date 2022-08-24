@@ -132,15 +132,34 @@ function drawApple() {
     ctx.fillRect(appleX * tileCount, appleY * tileCount, tileSize, tileSize)
 }
 
+function checkIfAppleDidNotLandedOnTheSnakesBody(){
+    let landedOnSnakeBodyBool = false;
+
+    for (let i = 0; i < snakeParts.length; i++) {
+        let snakePart = snakeParts[i];
+        if(snakePart.x == appleX && snakePart.y  == appleY){
+            landedOnSnakeBodyBool = true
+            break;
+        }
+    }
+
+    if(landedOnSnakeBodyBool) {
+        appleX = Math.floor(Math.random() * tileCount);
+        appleY = Math.floor(Math.random() * tileCount);
+        checkIfAppleDoesNotLandOnSnakesBody()
+    }
+}
+
 function checkAppleCollision() {
     if (appleX == headX && appleY == headY) {
         log('Apple eaten');
-        appleX = Math.floor(Math.random() * tileCount);
-        appleY = Math.floor(Math.random() * tileCount);
+        appleX = 1//Math.floor(Math.random() * tileCount);
+        appleY = 1//Math.floor(Math.random() * tileCount);
         tailLength++;
         score++;
         gulpSound.play();
     }
+    checkIfAppleDidNotLandedOnTheSnakesBody()
 }
 
 

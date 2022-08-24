@@ -146,15 +146,15 @@ function checkIfAppleDidNotLandedOnTheSnakesBody(){
     if(landedOnSnakeBodyBool) {
         appleX = Math.floor(Math.random() * tileCount);
         appleY = Math.floor(Math.random() * tileCount);
-        checkIfAppleDoesNotLandOnSnakesBody()
+        checkIfAppleDidNotLandedOnTheSnakesBody()
     }
 }
 
 function checkAppleCollision() {
     if (appleX == headX && appleY == headY) {
         log('Apple eaten');
-        appleX = 1//Math.floor(Math.random() * tileCount);
-        appleY = 1//Math.floor(Math.random() * tileCount);
+        appleX = Math.floor(Math.random() * tileCount);
+        appleY = Math.floor(Math.random() * tileCount);
         tailLength++;
         score++;
         gulpSound.play();

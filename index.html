@@ -12,8 +12,61 @@
 
 <body>
     <h1>Snake</h1>
-    <p>Steruj strzałkami na klawiaturze :) </p>
-    <canvas id=game width=400 height=400 />
-    <script src="index.js"></script>
+    <p>Steruj strzałkami na klawiaturze :) /n albo użyj guzików: </p>
+    
+      
+
+
+
+       
+      
+
+        <table id="arrows_table">
+          <tr>
+            <th>
+              <p></p>
+            </th>
+              <th>    
+                  <button class="button" id="button_arrow_up">
+                      <div class="button__arrow button__arrow--up"></div>
+                  </button>
+              </th>
+            <th>
+              <p></p>
+            </th>
+          </tr>
+          <tr>
+              <td>    
+                  <button class="button" id="button_arrow_left">
+                      <div class="button__arrow button__arrow--left"></div>
+                  </button>
+              </td>
+            <td>
+              <p></p>
+            </td>
+              <td>    
+                  <button class="button" id="button_arrow_right">
+                      <div class="button__arrow button__arrow--right"></div>
+                  </button>
+              </td>
+          </tr>
+          <tr>
+            <td>
+              <p></p>
+            </td>
+              <td>    
+                  <button class="button" id="button_arrow_down">
+                      <div class="button__arrow button__arrow--down"></div>
+                  </button>
+              </td>
+            <td>
+              <p></p>
+            </td>
+          </tr>
+        </table>
+
+        <canvas id=game width=400 height=400></canvas>
+        <script src="index.js"></script>
+
 </body>
 </html>

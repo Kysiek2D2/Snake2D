@@ -28,7 +28,18 @@ let score = 0;
 
 const gulpSound = new Audio("gulp.mp3");
 
+//Listener for arrow buttons on the keyboard
 document.body.addEventListener('keydown', keyDown);
+
+//Listeners for arrow button on the screen
+document.getElementById("button_arrow_up").addEventListener('click',(e)=>{keyDown(
+    new KeyboardEvent("keydown", {keyCode: 38}))});
+document.getElementById("button_arrow_down").addEventListener('click',(e)=>{keyDown(
+    new KeyboardEvent("keydown", {keyCode: 40}))});
+document.getElementById("button_arrow_left").addEventListener('click',(e)=>{keyDown(
+    new KeyboardEvent("keydown", {keyCode: 37}))});
+document.getElementById("button_arrow_right").addEventListener('click',(e)=>{keyDown(
+    new KeyboardEvent("keydown", {keyCode: 39}))});
 
 function drawGame() {
     log('Refreshing...');
@@ -197,7 +208,7 @@ function preventBackMovementCrash(){
     if(previousYVelocity == 1 && yVelocity == -1)
         yVelocity = previousYVelocity;
 
-    if(previousYVelocity == -1 && yVelocity ==1)
+    if(previousYVelocity == -1 && yVelocity == 1)
         yVelocity = previousYVelocity;
 
     previousXVelocity = xVelocity;

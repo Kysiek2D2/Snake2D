@@ -12,61 +12,55 @@
 
 <body>
     <h1>Snake</h1>
-    <p>Steruj strzałkami na klawiaturze :) /n albo użyj guzików: </p>
-    
-      
 
+    <canvas id=game width=400 height=400></canvas>
 
-
-       
-      
-
-        <table id="arrows_table">
-          <tr>
-            <th>
-              <p></p>
+    <p>Steruj strzałkami na klawiaturze lub użyj poniższych guzików na urządzeniach mobilnych :) </p>
+    <table>
+        <tr>
+          <th>
+            <p></p>
+          </th>
+            <th>    
+                <button class="button" id="button_arrow_up">
+                    <div class="button__arrow button__arrow--up"></div>
+                </button>
             </th>
-              <th>    
-                  <button class="button" id="button_arrow_up">
-                      <div class="button__arrow button__arrow--up"></div>
-                  </button>
-              </th>
-            <th>
-              <p></p>
-            </th>
-          </tr>
-          <tr>
-              <td>    
-                  <button class="button" id="button_arrow_left">
-                      <div class="button__arrow button__arrow--left"></div>
-                  </button>
-              </td>
-            <td>
-              <p></p>
+          <th>
+            <p></p>
+          </th>
+        </tr>
+        <tr>
+            <td>    
+                <button class="button" id="button_arrow_left">
+                    <div class="button__arrow button__arrow--left"></div>
+                </button>
             </td>
-              <td>    
-                  <button class="button" id="button_arrow_right">
-                      <div class="button__arrow button__arrow--right"></div>
-                  </button>
-              </td>
-          </tr>
-          <tr>
-            <td>
-              <p></p>
+          <td>
+            <p></p>
+          </td>
+            <td>    
+                <button class="button" id="button_arrow_right">
+                    <div class="button__arrow button__arrow--right"></div>
+                </button>
             </td>
-              <td>    
-                  <button class="button" id="button_arrow_down">
-                      <div class="button__arrow button__arrow--down"></div>
-                  </button>
-              </td>
-            <td>
-              <p></p>
+        </tr>
+        <tr>
+          <td>
+            <p></p>
+          </td>
+            <td>    
+                <button class="button" id="button_arrow_down">
+                    <div class="button__arrow button__arrow--down"></div>
+                </button>
             </td>
-          </tr>
-        </table>
+          <td>
+            <p></p>
+          </td>
+        </tr>
+      </table>
 
-        <canvas id=game width=400 height=400></canvas>
-        <script src="index.js"></script>
-
+      <script src="index.js"></script>
+ 
 </body>
 </html>
